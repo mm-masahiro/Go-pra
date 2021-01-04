@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/rand"
+	"time"
 )
 
 func pow(x, n, lim float64) float64 {
@@ -36,5 +38,29 @@ func main() {
 	// trueじゃなかったらここが走る
 	fmt.Println("No")
 
-	fmt.Println(pow(3, 2, 10))
+	fmt.Println(pow(3, 2, 10))	
+
+	rand.Seed(time.Now().UnixNano())
+	var guess int
+	var answer int = rand.Intn(10) + 1
+
+	fmt.Print("Your guess?")
+	
+	// Scanで入力を受け取る
+	fmt.Scanf("%v", &guess)
+
+	if answer == guess {
+		fmt.Println("Bingo!!")
+	} else if answer > guess {
+		fmt.Println("answer is more big")
+	} else {
+		fmt.Println("answer is more small")
+	}
+
+	fmt.Printf("Your guess is %v\n", guess)
+	
+	// var foo string = "foo"
+	
+	// %vで変数の埋め込み
+	// fmt.Printf("%v", foo)
 }
