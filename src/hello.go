@@ -33,19 +33,19 @@ func main() {
 	var hoge int
 	hoge = 1
 	if hoge == 0 {
-		 fmt.Println("OK")
+		fmt.Println("OK")
 	}
 	// trueじゃなかったらここが走る
 	fmt.Println("No")
 
-	fmt.Println(pow(3, 2, 10))	
+	fmt.Println(pow(3, 2, 10))
 
 	rand.Seed(time.Now().UnixNano())
 	var guess int
 	var answer int = rand.Intn(10) + 1
 
 	fmt.Print("Your guess?")
-	
+
 	// Scanで入力を受け取る
 	fmt.Scanf("%v", &guess)
 
@@ -58,9 +58,18 @@ func main() {
 	}
 
 	fmt.Printf("Your guess is %v\n", guess)
-	
+
 	// var foo string = "foo"
-	
+
 	// %vで変数の埋め込み
 	// fmt.Printf("%v", foo)
+
+	fmt.Println("hoge")
+	fmt.Println("foo")
+	fmt.Println("a", 100, true)
+
+	var price int
+	fmt.Println("Price >")
+	fmt.Scan(&price)
+	fmt.Printf("%dYen\n", price)
 }
