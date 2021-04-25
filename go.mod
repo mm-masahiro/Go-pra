@@ -3,6 +3,7 @@ module go-tools
 go 1.15
 
 require (
+	github.com/gin-gonic/gin v1.7.1 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/neelance/parallel v0.0.0-20160708114440-4de9ce63d14c // indirect
 	github.com/opentracing/basictracer-go v1.1.0 // indirect
